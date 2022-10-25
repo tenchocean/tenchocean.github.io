@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Jekyll"
+title: "Assignment 2"
 layout: post
 ---
 
@@ -17,6 +17,22 @@ end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
+## R code chunks
+
+Now we write some R code chunks in this post. For example,
+
+```{r}
+options(digits = 3)
+cat("hello world!")
+set.seed(123)
+(x = rnorm(40) + 10)
+# generate a table
+knitr::kable(head(mtcars))
+(function() {
+  if (TRUE) 1 + 1  # a boring comment
+})()
+names(formals(servr::jekyll))  # arguments of the jekyll() function
+```
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
